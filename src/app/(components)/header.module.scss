@@ -1,0 +1,24 @@
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10vw;
+  box-sizing: border-box;
+  background-color: #090909;
+  border-bottom: 3px solid #fc6b1e;
+  height: 10vh;
+  & > a > img {
+    object-fit: contain;
+    aspect-ratio: auto;
+    width: calc(180px + ((100vw - 350px) * ((270 - 180) / (1920 - 350))));
+  }
+  & > h1 {
+    display: flex;
+    font-size: calc(16px + ((100vw - 900px) * ((20 - 16) / (1920 - 900))));
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.93);
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+}

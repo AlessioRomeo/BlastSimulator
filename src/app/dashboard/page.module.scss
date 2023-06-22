@@ -1,0 +1,205 @@
+#temporaryLink {
+  text-decoration: none;
+}
+
+#dashboardContainer {
+  padding-inline: calc(0px + ((100vw - 900px) * ((180 - 0) / (1920 - 900))));
+  height: 90vh;
+  //padding-inline: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 900px) {
+    justify-content: normal;
+  }
+  //background-color: red;
+}
+
+#menuContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  @media (max-width: 900px) {
+    display: none;
+    flex-direction: column;
+    background-color: red;
+    gap: 0;
+    padding-bottom: 0;
+  }
+  & > button {
+    padding: 15px 20px;
+    font-size: calc(15px + ((100vw - 900px) * ((19 - 15) / (1920 - 900))));
+    border-radius: 5px;
+    @media (max-width: 900px) {
+      border-radius: 0;
+      border-bottom: 1px solid #606060;
+      width: 100%;
+    }
+    cursor: pointer;
+    background-color: #aeaeae;
+    transition: .3s;
+    &:hover {
+      background-color: #cecece;
+    }
+  }
+}
+
+#filtersButton {
+  width: 100%;
+  padding-block: 23px;
+  font-size: calc(15px + ((100vw - 900px) * ((19 - 15) / (1920 - 900))));
+  background-color: #cecece;
+  color: #090909;
+  display: none;
+  cursor: pointer;
+  @media (max-width: 900px) {
+    display: block;
+    background-color: #444444;
+    color: #fff;
+    &:hover {
+      background-color: #4f4f4f;
+    }
+  }
+  @media (max-width: 600px) {
+    display: block;
+    background-color: #090909;
+    color: #fff;
+    &:hover {
+      background-color: #121212;
+    }
+  }
+}
+
+.filtersButtonIsActive {
+  display: block!important;
+}
+
+#mainContainer {
+  width: 100%;
+  min-height: 80%;
+  max-height: 80%;
+  border-radius: 5px;
+  overflow-y: scroll;
+  @media (max-width: 900px) {
+    min-height: 90vh;
+    border-radius: 0;
+  }
+  //@media (max-width: ) {
+    
+  //}
+  //background-color: purple;
+}
+
+.tableTitleContainer {
+  position: sticky;
+  top: 0;
+  //width: 80vw;
+  box-sizing: border-box;
+  background-color: #090909!important;
+  cursor: default!important;
+  @media (max-width: 600px) {
+    display: none!important;
+  }
+}
+
+.tableItemsContainer {
+  display: flex;
+  background-color: #aeaeae;
+  color: rgba(255, 255, 255, 0.93);
+  padding: 30px 20px;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background-color: #cecece;
+  }
+
+  & #tableTitlesFormatting {
+    //background-color: red;
+    height: 100%;
+    font-size: calc(18px + ((100vw - 900px) * ((22 - 18) / (1920 - 900))));
+    font-weight: 600;
+  }
+  & #tableItemFormatting {
+    //background-color: red;
+    height: 100%;
+    font-size: calc(16px + ((100vw - 900px) * ((20 - 16) / (1920 - 900))));
+    font-weight: 400;
+    color: #000;
+  }
+  & > ul {
+    display: flex;
+    width: 100%;
+    //background-color: green;
+    justify-content: space-between;
+    & .leftContainer {
+      display: flex;
+      width: 80%;
+      @media (max-width: 600px) {
+        flex-direction: column;
+
+      }
+      & > li:nth-of-type(1) {
+        width: calc(90px + ((100vw - 900px) * ((150 - 90) / (1920 - 900))));
+        @media (max-width: 600px) {
+          width: 100%;
+          //background-color: red;
+        }
+      }
+      & > li:nth-of-type(2) {
+        width: calc(180px + ((100vw - 900px) * ((300 - 180) / (1920 - 900))));
+      }
+      & > li {
+        width: calc(160px + ((100vw - 900px) * ((270 - 160) / (1920 - 900))));
+        margin-bottom: 10px;
+        @media (max-width: 600px) {
+          display: flex;
+          width: 100%!important;
+          //background-color: red;
+        }
+        & > span {
+          display: none;
+          //background-color: blue;
+          font-weight: 600;
+          width: 80px;
+          @media (max-width: 600px) {
+            display: flex;
+          }
+        }
+        //background-color: red;
+        & > h3 {
+          width: calc(140px + ((100vw - 900px) * ((200 - 140) / (1920 - 900))));
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          @media (max-width: 600px) {
+            width: 50%;
+          }
+          //background-color: blue;
+        }
+        //background-color: red;
+      }
+    }
+    & .rightContainer {
+      //background-color: green;
+      width: calc(100px + ((100vw - 900px) * ((130 - 100) / (1920 - 900))));
+      & > li {
+        font-size: calc(16px + ((100vw - 900px) * ((20 - 16) / (1920 - 900))));
+      }
+      //background-color: green;
+      @media (max-width: 600px) {
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    & > div {
+      display: flex;
+    }
+  }
+}
